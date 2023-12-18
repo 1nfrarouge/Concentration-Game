@@ -17,7 +17,7 @@
         </div>
 
         <div class="markers">
-
+            
         </div>
 
         <div class="board">
@@ -25,23 +25,25 @@
         </div>
 
         <div class="scoreboard">
-            <p>PAIRS FOUND:</p>
-            <p>WRONG GUESSES:</p>
-            <p>TIME REMAINING:</p>
+            <p>PAIRS FOUND: <span id="pairs-found">0</span></p>
+            <p>WRONG GUESSES: <span id="wrong-guesses">0</span></p>
+            <p>TIME REMAINING: <span id="time-remaining">120</span>seconds</p>
         </div>
 
         <div class="button-container">
-
+            <button onclick="resetGame()">PLAY AGAIN</button>
         </div>
 
     </main>
 
     <div class="pop-up" id="winner-popup">
         <p>CONGRATS! YOU WON!!!</p>
+        <button onclick="resetGame()">PLAY AGAIN</button>
     </div>
 
     <div class="pop-up" id="loser-popup">
         <p>OOPS! BETTER LUCK NEXT TIME!</p>
+        <button onclick="resetGame()">PLAY AGAIN</button>
     </div>
     
 </body>
