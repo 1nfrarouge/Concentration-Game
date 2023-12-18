@@ -1,0 +1,81 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #9bd0f3;
+    color: white;
+  }
+  
+  /* Main Styles */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .message {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .markers {
+
+  }
+
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+    background-color: #7ce5ff;
+    border: 1px solid #f5fbff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;  
+  }
+
+  .scoreboard {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+  }
+
+  .pop-up {
+    position: fixed;
+    background-color: aquamarine;
+    padding: 20px;
+    border: 1px;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: azure;
+  }
