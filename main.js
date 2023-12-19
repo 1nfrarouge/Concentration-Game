@@ -8,8 +8,13 @@ let isClickable = true;
 let wrongGuesses = 0;
 
 /*----- cached elements -----*/
+const board = document.querySelector('.board');
+const pairsFoundElement = document.getElementById('pairs-found');
+const wrongGuessesElement = document.getElementById('wrong-guesses');
+const timeRemainingElement = document.getElementById('time-remaining');
 
 /*----- event listeners -----*/
+board.addEventListener('click', handleCardClick);
 
 /*----- functions -----*/
 
