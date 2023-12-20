@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Concentration Game</title>
+    <script defer="main.js"></script>
 </head>
 <body>
     <header>
@@ -16,12 +17,20 @@
             <p>MATCH ALL 6 PAIRS TO WIN!</p>
         </div>
 
-        <div class="markers">
-            
-        </div>
-
         <div class="board">
-
+            <!-- Card IMGS -->
+            <img src="" class="card" id="card0" alt="Card 0">
+            <img src="" class="card" id="card1" alt="Card 1">
+            <img src="" class="card" id="card2" alt="Card 2">
+            <img src="" class="card" id="card3" alt="Card 3">
+            <img src="" class="card" id="card4" alt="Card 4">
+            <img src="" class="card" id="card5" alt="Card 5">
+            <img src="" class="card" id="card6" alt="Card 6">
+            <img src="" class="card" id="card7" alt="Card 7">
+            <img src="" class="card" id="card8" alt="Card 8">
+            <img src="" class="card" id="card9" alt="Card 9">
+            <img src="" class="card" id="card10" alt="Card 10">
+            <img src="" class="card" id="card11" alt="Card 11">
         </div>
 
         <div class="scoreboard">
@@ -31,19 +40,16 @@
         </div>
 
         <div class="button-container">
-            <button onclick="resetGame()">PLAY AGAIN</button>
         </div>
 
     </main>
 
     <div class="pop-up" id="winner-popup">
         <p>CONGRATS! YOU WON!!!</p>
-        <button onclick="resetGame()">PLAY AGAIN</button>
     </div>
 
     <div class="pop-up" id="loser-popup">
         <p>OOPS! BETTER LUCK NEXT TIME!</p>
-        <button onclick="resetGame()">TRY AGAIN</button>
     </div>
     
 </body>
