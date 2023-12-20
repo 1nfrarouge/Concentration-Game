@@ -1,11 +1,21 @@
 /*----- constants -----*/
 const totalPairs = 6;
+const SOURCE_CARDS = [
+    {img: '', matched: false},
+    {img: '', matched: false},
+    {img: '', matched: false},
+    {img: '', matched: false},
+    {img: '', matched: false},
+    {img: '', matched: false},
+];
+const CARD_BACK_IMAGE = '';
 
 /*----- state variables -----*/
 let pairsFound = 0;
 let cardsFlipped = 0;
 let isClickable = true;
 let wrongGuesses = 0;
+let shuffledCards;
 
 /*----- cached elements -----*/
 const board = document.querySelector('.board');
@@ -18,6 +28,20 @@ board.addEventListener('click', handleCardClick);
 
 /*----- functions -----*/
 init();
+
+// Initilize the Game
+function init() {
+    shuffledCards = generateShuffleCards();
+    renderCards();
+
+    pairsFound = 0;
+    cardsFlipped = 0;
+    isClickable = true;
+    wrongGuesses = 0;
+
+    pairsFoundElement.textContent = pairsFound;
+    wrongGuessesElement.textContent = wrongGuesses;
+}
 // Card Click
 function handleCardClick(event) {
     const card = event.target;
@@ -28,6 +52,7 @@ function handleCardClick(event) {
 
 // Flip Card
 function flipCard(card) {
+    const cardIndex = card.
     card.classList.add('flipped');
     cardsFlipped++;
     if (cardsFlipped === 2) {
@@ -94,5 +119,5 @@ function generateShuffleCards() {
 
 // Render Cards on Board
 
-// Call resetGame
-resetGame();
+// Display Winner PopUp
+// Display Loser PopUp
