@@ -3,15 +3,27 @@ body, h1, p {
     padding: 0;
 }
 
+/* BG img and body styling */
 body {
-    font-family: 'Arial', sans-serif;
+  background-image: url('https://github.com/1nfrarouge/Concentration-Game/blob/main/Background.png?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  color: white;
 }
-
+/* Center page content */
+.container {
+  display:grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "character game controls";
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 /* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-    background-color: #9bd0f3;
     color: white;
   }
   
@@ -41,8 +53,6 @@ header {
   .card {
     width: 100px;
     height: 100px;
-    background-color: #7ce5ff;
-    border: 1px solid #f5fbff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +72,6 @@ header {
 
   .pop-up {
     position: fixed;
-    background-color: aquamarine;
     padding: 20px;
     border: 1px;
     text-align: center;
@@ -70,12 +79,10 @@ header {
 
   button {
     padding: 10px;
-    background-color: #3498db;
     color: white;
     border: none;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: azure;
   }
