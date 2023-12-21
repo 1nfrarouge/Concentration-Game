@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Concentration Game</title>
-    <script defer src="js/main.js"></script>
 </head>
 <body>
     <header>
-        <h1>Concentration</h1>
+        <h1>Bunny Concentration</h1>
     </header>
     
     <main>
         <div class="message">
-            <p>MATCH ALL 6 PAIRS TO WIN!</p>
+            <p>Help bunny find his food! Match all 6 pairs to win!</p>
         </div>
-
+        
         <div class="board">
             <!-- Card IMGS -->
             <img src="" class="card" id="card0" alt="Card 0">
@@ -32,21 +31,22 @@
             <img src="" class="card" id="card10" alt="Card 10">
             <img src="" class="card" id="card11" alt="Card 11">
         </div>
-
+        
         <div class="scoreboard">
             <p>PAIRS FOUND: <span id="pairs-found">0</span></p>
             <p>WRONG GUESSES: <span id="wrong-guesses">0</span></p>
-            <p>TIME REMAINING: <span id="time-remaining">120</span>seconds</p>
         </div>
     </main>
-
+    
     <div class="pop-up" id="winner-popup">
         <p>CONGRATS! YOU WON!!!</p>
     </div>
-
+    
     <div class="pop-up" id="loser-popup">
         <p>OOPS! BETTER LUCK NEXT TIME!</p>
     </div>
-    
+</div>
+<button id="play-again">PLAY AGAIN</button>
+<script defer src="js/main.js"></script>
 </body>
 </html>

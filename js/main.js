@@ -1,18 +1,18 @@
 /*----- constants -----*/
 const totalPairs = 6;
 const SOURCE_CARDS = [
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/BlueBerry.png?raw=true', matched: false },
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/BokChoy.png?raw=true', matched: false },
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/Cabbage.png?raw=true', matched: false },
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/Carrot.png?raw=true', matched: false },
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/Kale.png?raw=true', matched: false },
-    { img: 'https://github.com/1nfrarouge/Concentration-Game/blob/main/Strawberry.png?raw=true', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/strawberry.png', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/apple.png', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/blueberry.png', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/cabbage.png', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/carrot.png', matched: false },
+    { img: 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/celery.png', matched: false },
 ];
-const CARD_BACK_IMAGE = 'https://github.com/1nfrarouge/Concentration-Game/blob/main/Cloud.png?raw=true';
+const CARD_BACK_IMAGE = 'https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/6369fdc7ec82d4c2e5a5785d3ec4c7cd169f73aa/cloud.png';
 
 /*----- state variables -----*/
 let shuffledCards;
-let pairsFound = 0; // Add this variable
+let pairsFound = 0; 
 let firstCard = null;
 let isClickable = true;
 let wrongGuesses = 0;
@@ -21,9 +21,13 @@ let wrongGuesses = 0;
 const board = document.querySelector('.board');
 const pairsFoundElement = document.getElementById('pairs-found');
 const wrongGuessesElement = document.getElementById('wrong-guesses');
+const winnerPopup = document.getElementById('winner-popup');
+const loserPopup = document.getElementById('loser-popup');
+const playAgainButton = document.getElementById('play-again');
 
 /*----- event listeners -----*/
 board.addEventListener('click', handleCardClick);
+playAgainButton.addEventListener('click', handlePlayAgainClick);
 
 /*----- functions -----*/
 init();
@@ -59,7 +63,6 @@ function flipCard(card) {
     card.classList.toggle('flipped');
     const cardIndex = parseInt(card.id.replace('card', ''));
 
-    // Get the correct image URL from the shuffledCards array
     card.src = card.classList.contains('flipped') ? shuffledCards[cardIndex].img : CARD_BACK_IMAGE;
     console.log('Card flipped');
 }
@@ -73,7 +76,7 @@ function checkForMatch(card1, card2) {
     if (shuffledCards[index1].img === shuffledCards[index2].img) {
         pairsFound++;
         pairsFoundElement.textContent = pairsFound;
-        if (pairsFound === totalPairs) displayWinnerPopup();
+        checkForWin();
     } else {
         wrongGuesses++;
         wrongGuessesElement.textContent = wrongGuesses;
@@ -82,6 +85,7 @@ function checkForMatch(card1, card2) {
             flipCard(card1);
             flipCard(card2);
             isClickable = true;
+            checkForLoss();
         }, 2000);
     }
     console.log('Checking for match');
@@ -93,6 +97,13 @@ function checkForWin() {
         displayWinnerPopup();
     }
     console.log('Check for win');
+}
+
+// Check for Loss
+function checkForLoss() {
+    if(wrongGuesses >= 6) {
+        displayLoserPopup();
+    }
 }
 
 // Reset Game
@@ -109,7 +120,7 @@ function resetBoard() {
     cards.forEach((card) => {
         card.classList.remove('flipped');
     });
-    shuffledCards = generateShuffleCards(); // Update the global shuffledCards
+    shuffledCards = generateShuffleCards(); 
     renderCards();
     console.log(shuffledCards);
 }
@@ -136,4 +147,28 @@ function renderCards() {
         card.id = `card${index}`;
     });
     console.log('Rendering cards');
+}
+
+// Displaying Winner pop-up
+function displayWinnerPopup() {
+    const winnerPopup = document.getElementById('winner-popup');
+    winnerPopup.style.display = 'block'
+}
+
+// Display Lose pop-up
+function displayLoserPopup() {
+    const loserPopup = document.getElementById('loser-popup');
+    loserPopup.style.display = 'block'
+}
+
+// Hide Pop-up
+function hidePopups() {
+    winnerPopup.style.display = 'none';
+    loserPopup.style.display = 'none';
+}
+
+// Handle Play again button click
+function handlePlayAgainClick() {
+    console.log('Play Again button clicked');
+    init();
 }

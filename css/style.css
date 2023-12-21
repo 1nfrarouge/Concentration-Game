@@ -84,5 +84,6 @@ header {
     cursor: pointer;
   }
 
-  button:hover {
-  }
+  .pop-up {
+    display: none;
+}
