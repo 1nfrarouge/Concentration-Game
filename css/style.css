@@ -1,6 +1,6 @@
 body, h1, p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* BG img and body styling */
@@ -9,81 +9,98 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, sans-serif;
-  color: white;
+  color: #31588E;
 }
-/* Center page content */
-.container {
-  display:grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: "character game controls";
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+
+h1, .message {
+  color: #FBFEE9;
 }
+
 /* Header Styles */
 header {
-    text-align: center;
-    padding: 20px;
-    color: white;
-  }
-  
-  /* Main Styles */
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .message {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
 
-  .markers {
+/* Main Styles */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
-  }
+.message {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 10px;
-  }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-left: 450px; 
+}
 
-  .card {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;  
-  }
+.card {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;  
+}
 
-  .scoreboard {
-    text-align: center;
-    margin-top: 20px;
-  }
+.scoreboard {
+  text-align: center;
+  margin-top: 20px;
+}
 
-  .button-container {
-    margin-top: 20px;
-  }
+.scoreboard p {
+  margin: 10px 0;
+  font-weight: bold; 
+  font-size: 18px;
+}
 
-  .pop-up {
-    position: fixed;
-    padding: 20px;
-    border: 1px;
-    text-align: center;
-  }
+.pop-up {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 30%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+}
 
-  button {
-    padding: 10px;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+.pop-up p {
+  color: #31588E;
+  font-weight: bold; 
+  font-size: 20px; 
+}
 
-  .pop-up {
-    display: none;
+.pop-up img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #446a95; 
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.character img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }

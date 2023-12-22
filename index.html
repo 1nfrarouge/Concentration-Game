@@ -8,12 +8,12 @@
 </head>
 <body>
     <header>
-        <h1>Bunny Concentration</h1>
+        <h1>Bunny Cloud Concentration</h1>
     </header>
     
     <main>
         <div class="message">
-            <p>Help bunny find his food! Match all 6 pairs to win!</p>
+            <p>Bunny is hungry! Match & find all his food to feed him! You only get 6 chances.</p>
         </div>
         
         <div class="board">
@@ -37,13 +37,19 @@
             <p>WRONG GUESSES: <span id="wrong-guesses">0</span></p>
         </div>
     </main>
+
+    <div class="character">
+        <img src="https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/960f362e14136f71e7df0034ae26ca6d1ac8e26f/start.png" id="character-img" alt="Character Image">
+      </div>
     
     <div class="pop-up" id="winner-popup">
-        <p>CONGRATS! YOU WON!!!</p>
+        <img src="https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/960f362e14136f71e7df0034ae26ca6d1ac8e26f/win.png" id="character-img" alt="Winner">
+        <p>Bunny is full! YOU WIN!</p>
     </div>
     
     <div class="pop-up" id="loser-popup">
-        <p>OOPS! BETTER LUCK NEXT TIME!</p>
+        <img src="https://raw.githubusercontent.com/1nfrarouge/Concentration-Game/960f362e14136f71e7df0034ae26ca6d1ac8e26f/lost%202.png" id="character-img" alt="Loser">
+        <p>BUNNY IS STILL HUNGRY!!!</p>
     </div>
 </div>
 <button id="play-again">PLAY AGAIN</button>

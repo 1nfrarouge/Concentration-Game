@@ -38,6 +38,7 @@ function init() {
     renderCards();
     resetGameStats();
     console.log('Game initialize');
+    hidePopups();
 }
 
 // Card Click
@@ -86,7 +87,7 @@ function checkForMatch(card1, card2) {
             flipCard(card2);
             isClickable = true;
             checkForLoss();
-        }, 2000);
+        }, 500);
     }
     console.log('Checking for match');
 }
