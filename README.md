@@ -24,3 +24,7 @@ Future enhancements planned for the game include:
 - **Add more CSS**: Adding more CSS to make the game more visually pleasing
 
 
+- **Adaptive Difficulty**: Introducing difficulty levels that adjust to the player's skill level.
+- **Add more CSS**: Adding more CSS to make the game more visually pleasing
+
+
