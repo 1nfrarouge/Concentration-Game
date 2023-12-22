@@ -3,9 +3,9 @@ Bunny Cloud Concentration is an interactive, web-based game designed to test and
 
 ## Screenshot
 Add screenshots of your game here. This gives a visual introduction to your project.
-![Bunny Cloud Concentration Game - Screenshot Start](https://imgur.com/g0Dmj4e)
-![Bunny Cloud Concentration Game - Screenshot Lost](https://imgur.com/Iw8p249)
-![Bunny Cloud Concentration Game - Screenshot Win](https://imgur.com/HGtugQ0)
+![Bunny Cloud Concentration Game - Screenshot Start](https://i.imgur.com/g0Dmj4e.png)
+![Bunny Cloud Concentration Game - Screenshot Lost](https://i.imgur.com/Iw8p249.png)
+![Bunny Cloud Concentration Game - Screenshot Win](https://i.imgur.com/HGtugQ0.png)
 
 ## Technologies Used
 - JavaScript: For game logic and interactivity.
